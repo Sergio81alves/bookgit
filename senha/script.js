@@ -62,7 +62,7 @@ function dropNeutral(e) {
 //Logic Functions
 function updateAreas() {
     document.querySelectorAll('.area').forEach(area => {
-        let name = area.getAttribute('date-name');
+        let name = area.getAttribute('data-name');
        
         if(area.querySelector('.item') !== null) {
             areas[name] = area.querySelector('.item').innerHTML;
@@ -70,5 +70,10 @@ function updateAreas() {
             areas[name] = null;
         }
     });
-    console.log(areas);
+   if(areas.a ==='2' && areas.b ==='7' && areas.c==='5') {
+       document.querySelector('.areas').classList.add('correct');
+   }else{
+    document.querySelector('.areas').classList.remove('correct');
+   }
+
 }
